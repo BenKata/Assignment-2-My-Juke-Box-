@@ -10,18 +10,17 @@ using System.Windows.Forms;
 
 namespace Assignment_2__My_Juke_Box_
 {
-    public partial class Form1 : Form
+    public partial class AboutForm : Form
     {
-        public Form1()
+        public AboutForm()
         {
             InitializeComponent();
         }
 
-        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        private void btn_closeAbout_Click(object sender, EventArgs e)
         {
-            // Loading up the About form
-            AboutForm About = new AboutForm();
-            About.ShowDialog();
+            //// Closes the about form
+            Close();
         }
     }
 }
