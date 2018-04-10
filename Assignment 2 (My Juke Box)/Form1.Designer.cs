@@ -30,15 +30,15 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.label1 = new System.Windows.Forms.Label();
-            this.PlayList = new System.Windows.Forms.ListBox();
+            this.Lst_PlayList = new System.Windows.Forms.ListBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.GenreList = new System.Windows.Forms.ListBox();
-            this.hScrollBar1 = new System.Windows.Forms.HScrollBar();
+            this.Lst_GenreList = new System.Windows.Forms.ListBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
             this.Hierachical = new System.Windows.Forms.MenuStrip();
             this.setUpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.hScroll_Genre = new System.Windows.Forms.HScrollBar();
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
             this.Hierachical.SuspendLayout();
             this.SuspendLayout();
@@ -55,15 +55,15 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Copyright © 2018. Ben Kata";
             // 
-            // PlayList
+            // Lst_PlayList
             // 
-            this.PlayList.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.PlayList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.PlayList.FormattingEnabled = true;
-            this.PlayList.Location = new System.Drawing.Point(169, 347);
-            this.PlayList.Name = "PlayList";
-            this.PlayList.Size = new System.Drawing.Size(180, 173);
-            this.PlayList.TabIndex = 1;
+            this.Lst_PlayList.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Lst_PlayList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.Lst_PlayList.FormattingEnabled = true;
+            this.Lst_PlayList.Location = new System.Drawing.Point(169, 347);
+            this.Lst_PlayList.Name = "Lst_PlayList";
+            this.Lst_PlayList.Size = new System.Drawing.Size(180, 173);
+            this.Lst_PlayList.TabIndex = 1;
             // 
             // textBox1
             // 
@@ -76,22 +76,16 @@
             this.textBox1.Size = new System.Drawing.Size(250, 20);
             this.textBox1.TabIndex = 2;
             // 
-            // GenreList
+            // Lst_GenreList
             // 
-            this.GenreList.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.GenreList.FormattingEnabled = true;
-            this.GenreList.HorizontalScrollbar = true;
-            this.GenreList.Location = new System.Drawing.Point(170, 192);
-            this.GenreList.Name = "GenreList";
-            this.GenreList.Size = new System.Drawing.Size(179, 69);
-            this.GenreList.TabIndex = 3;
-            // 
-            // hScrollBar1
-            // 
-            this.hScrollBar1.Location = new System.Drawing.Point(170, 254);
-            this.hScrollBar1.Name = "hScrollBar1";
-            this.hScrollBar1.Size = new System.Drawing.Size(179, 17);
-            this.hScrollBar1.TabIndex = 4;
+            this.Lst_GenreList.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Lst_GenreList.FormattingEnabled = true;
+            this.Lst_GenreList.HorizontalScrollbar = true;
+            this.Lst_GenreList.Location = new System.Drawing.Point(170, 192);
+            this.Lst_GenreList.MultiColumn = true;
+            this.Lst_GenreList.Name = "Lst_GenreList";
+            this.Lst_GenreList.Size = new System.Drawing.Size(179, 69);
+            this.Lst_GenreList.TabIndex = 3;
             // 
             // textBox2
             // 
@@ -139,6 +133,13 @@
             this.aboutToolStripMenuItem.Text = "About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
+            // hScroll_Genre
+            // 
+            this.hScroll_Genre.Location = new System.Drawing.Point(170, 245);
+            this.hScroll_Genre.Name = "hScroll_Genre";
+            this.hScroll_Genre.Size = new System.Drawing.Size(178, 16);
+            this.hScroll_Genre.TabIndex = 8;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -146,15 +147,16 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(508, 646);
+            this.Controls.Add(this.hScroll_Genre);
             this.Controls.Add(this.axWindowsMediaPlayer1);
             this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.hScrollBar1);
-            this.Controls.Add(this.GenreList);
+            this.Controls.Add(this.Lst_GenreList);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.PlayList);
+            this.Controls.Add(this.Lst_PlayList);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Hierachical);
             this.MainMenuStrip = this.Hierachical;
+            this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "My Juke Box v1.0";
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).EndInit();
@@ -168,15 +170,15 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ListBox PlayList;
+        private System.Windows.Forms.ListBox Lst_PlayList;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ListBox GenreList;
-        private System.Windows.Forms.HScrollBar hScrollBar1;
+        private System.Windows.Forms.ListBox Lst_GenreList;
         private System.Windows.Forms.TextBox textBox2;
         private AxWMPLib.AxWindowsMediaPlayer axWindowsMediaPlayer1;
         private System.Windows.Forms.MenuStrip Hierachical;
         private System.Windows.Forms.ToolStripMenuItem setUpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
+        private System.Windows.Forms.HScrollBar hScroll_Genre;
     }
 }
 
