@@ -56,7 +56,25 @@ namespace Assignment_2__My_Juke_Box_
         }
 
 
-        private bool
+        private bool Loading_Media()
+        {   //Checking if the file exist in that path
+            if (File.Exists(Appication_Path + @"\Media\Media.txt"))
+            {   //Read the file from the path using SteamReader
+                using (StreamReader reader = new StreamReader(Appication_Path + @"\Media\Media.txt"))
+                {
+                    NumberofGenre = Convert.ToInt32(reader.ReadLine());
+                    Media_Lib = new ListBox[NumberofGenre];
+                    //For loops to extend the array for the amount of data inside the file
+                    for (int a = 0; a < NumberofGenre; a++)
+                    {
+                        Media_Lib[a] = new ListBox();
+                        int int_value = Convert.ToInt32(reader.ReadLine());
+                        Media_Lib[a].Items.Add(reader.ReadLine());
+                    }
+                  
+                }
+            }
+        }
     }
 
 
