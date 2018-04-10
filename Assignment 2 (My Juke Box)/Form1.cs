@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+// Allows file access libaries 
+using System.IO;
 
 namespace Assignment_2__My_Juke_Box_
 {
@@ -14,6 +16,7 @@ namespace Assignment_2__My_Juke_Box_
     {
         // Global varaibles 
         int NumberofGenre;
+        string Appication_Path = Directory.GetCurrentDirectory();
         ListBox[] Media_Lib;
 
 
@@ -51,6 +54,9 @@ namespace Assignment_2__My_Juke_Box_
             hScroll_Genre.Value = hScroll_Genre.Minimum;
             return true;
         }
+
+
+        private bool
     }
 
 
