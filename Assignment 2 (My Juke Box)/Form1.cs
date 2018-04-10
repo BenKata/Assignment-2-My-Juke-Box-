@@ -42,6 +42,15 @@ namespace Assignment_2__My_Juke_Box_
             Media_Lib[1] = new ListBox();
             Media_Lib[1].Items.Add("General");
         }
+
+        private bool Start_up()
+        {   // Setting up the scroll bar on the GUI with the mini and max values
+            hScroll_Genre.Minimum = 1;
+            hScroll_Genre.Maximum = NumberofGenre;
+            hScroll_Genre.SmallChange = 1;
+            hScroll_Genre.Value = hScroll_Genre.Minimum;
+            return true;
+        }
     }
 
 
