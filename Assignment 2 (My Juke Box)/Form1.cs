@@ -70,10 +70,19 @@ namespace Assignment_2__My_Juke_Box_
                         Media_Lib[a] = new ListBox();
                         int int_value = Convert.ToInt32(reader.ReadLine());
                         Media_Lib[a].Items.Add(reader.ReadLine());
+                        for (int b = 0; b < int_value; b++)
+                        {
+                            string string_item = reader.ReadLine();
+                            Media_Lib[a].Items.Add(string_item);
+                        }
                     }
+                    //Closing the streamreader
+                    reader.Close();
                   
                 }
+                return true;
             }
+            return false;
         }
     }
 
