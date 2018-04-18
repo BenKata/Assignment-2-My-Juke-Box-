@@ -31,7 +31,7 @@ namespace Assignment_2__My_Juke_Box_
         private void btn_setupOk_Click(object sender, EventArgs e)
         {
             // Closes the about form
-            Clos
+            Close();
         }
     }
 }
