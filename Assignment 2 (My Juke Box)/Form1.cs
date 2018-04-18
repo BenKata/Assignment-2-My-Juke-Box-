@@ -84,6 +84,13 @@ namespace Assignment_2__My_Juke_Box_
             }
             return false;
         }
+
+        private void setUpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // Loading up the About form
+            SetupForm Setup = new SetupForm();
+            Setup.ShowDialog();
+        }
     }
 
 

@@ -125,6 +125,7 @@
             this.setUpToolStripMenuItem.Name = "setUpToolStripMenuItem";
             this.setUpToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
             this.setUpToolStripMenuItem.Text = "Set up";
+            this.setUpToolStripMenuItem.Click += new System.EventHandler(this.setUpToolStripMenuItem_Click);
             // 
             // aboutToolStripMenuItem
             // 

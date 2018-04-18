@@ -10,17 +10,28 @@ using System.Windows.Forms;
 
 namespace Assignment_2__My_Juke_Box_
 {
-    public partial class AboutForm : Form
+    public partial class SetupForm : Form
     {
-        public AboutForm()
+        public SetupForm()
         {
             InitializeComponent();
         }
 
-        private void btn_closeAbout_Click(object sender, EventArgs e)
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_cancelsetup_Click(object sender, EventArgs e)
         {
             // Closes the about form
             Close();
+        }
+
+        private void btn_setupOk_Click(object sender, EventArgs e)
+        {
+            // Closes the about form
+            Clos
         }
     }
 }
